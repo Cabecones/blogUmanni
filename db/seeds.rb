@@ -10,3 +10,5 @@
 10.times do
   Post.create(title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph)
 end
+
+Admin.create(email: 'keven@gmail.com', password: 'admin', password_confirmation: 'admin')

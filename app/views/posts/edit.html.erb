@@ -1,4 +1,4 @@
-<% if is_admin? == true %>
+<%# if is_admin? == true %>
   <h2> Editar postagem </h2>
 
   <%= form_with model: @post do |postagens| %>
@@ -6,4 +6,4 @@
     <p>Conteúdo: <%= postagens.text_area :content %><p>
     <p> <%= postagens.submit "Salvar" %> </p>
   <% end %>
-<% end %>
+<% #end %>
