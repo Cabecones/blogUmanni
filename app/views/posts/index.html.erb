@@ -11,11 +11,9 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.content %></td>
-      <div class="options">
-        <td><%= link_to 'Ver mais', post %></td>
-        <td><%= link_to 'Editar', edit_post_path(post) %></td>
-        <td><%= link_to 'Apagar', post, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-      </div>
+      <td><%= link_to 'Ver mais', post, :class => "btn btn-primary" %></td>
+      <td><%= link_to  'Editar', edit_post_path(post), :class => "btn btn-primary" %></td>
+      <td><%= button_to 'Apagar', post, method: :delete, data: { confirm: 'Tem certeza?' }, :class => "btn btn-danger" %></td>
     </tr>
   <% end %>
 </table>

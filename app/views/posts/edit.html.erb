@@ -1,9 +1,11 @@
-<%# if is_admin? == true %>
-  <h2> Editar postagem </h2>
+<div class="card my-5">
+  <div class="card-body">
+    <h1>Editar postagem</h1>
 
-  <%= form_with model: @post do |postagens| %>
-    <p>Título: <%= postagens.text_field :title %><p>
-    <p>Conteúdo: <%= postagens.text_area :content %><p>
-    <p> <%= postagens.submit "Salvar" %> </p>
-  <% end %>
-<% #end %>
+    <%= render 'form', post: @post %>
+
+    <div class="mt-2">
+      <%= link_to 'Voltar', posts_path, class: 'btn btn-light' %>
+    </div>
+  </div>
+</div>
