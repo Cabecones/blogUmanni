@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :users
+  Rails.application.routes.draw do
+    devise_for :users, controllers: {
+      sessions: 'users/sessions'
+    }
+  end
 
   resources :posts
-  resources :users
-  resources :admins
 
   root to: 'posts#index'
-  get 'login', to: 'admins#login'
-  get 'logout', to: 'admins#logout'
-  post 'new_post/:id', to: 'posts#create'
-  post 'post_edit/:id', to: 'posts#update'
-  delete 'post/:id', to: 'posts#destroy'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  #metodos de posts
+  get 'posts', to: 'posts#index'
+  get 'posts/new', to: 'posts#new'
+  get 'posts_show/:id', to: 'posts#show'
+  get 'posts/:id/edit', to: 'posts#edit'
+  post 'posts', to: 'posts#create'
+  patch 'posts/:id', to: 'posts#update'
+  delete 'posts_delete/:id', to: 'posts#destroy'
 end

@@ -9,8 +9,6 @@ gem 'rails', '~> 6.1.5'
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -66,3 +64,11 @@ gem 'rubocop-rspec', require: false
 
 # fake data for model seed
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
+
+# windows
+gem 'wdm', '>= 0.1.0'
+
+gem 'jquery-rails'
+
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'

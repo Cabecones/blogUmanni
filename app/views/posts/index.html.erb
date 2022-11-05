@@ -1,7 +1,25 @@
-<% @posts.each do |post| %>
-  <h1><%= post.title %></h1>
-  <p><%= post.content %></p>
-  <%= link_to 'Editar', edit_post_path(post) %>
-  <%= link_to'Apagar', post_path(post), method: :delete, data: { confirm: 'Tem certeza?' } %>
-  <%= link_to 'Saiba mais', post_path(post) %>
-<% end %>
+<h1>Postagens</h1>
+
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Conteúdo</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <div class="options">
+        <td><%= link_to 'Ver mais', post %></td>
+        <td><%= link_to 'Editar', edit_post_path(post) %></td>
+        <td><%= link_to 'Apagar', post, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </div>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to 'Nova Postagem', new_post_path %>
