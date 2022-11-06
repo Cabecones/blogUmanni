@@ -1,8 +1,11 @@
 # Project Umanni by Keven
 
 Requirements
-*Ruby 2.7.6
-*Rails 6.1.5
+ *| Version
+ --- | ---
+ `Ruby` | *2.7.6*
+ `Rails` | *6.1.5*
+ 
 
 Run the command to install the necessary dependencies
 ```
