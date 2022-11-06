@@ -12,4 +12,3 @@ User.create(email: 'admin@admin', password: '123456', password_confirmation: '12
 10.times do
   Post.create(title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph, user_id: 1)
 end
-
