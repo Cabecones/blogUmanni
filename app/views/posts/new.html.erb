@@ -1,0 +1,9 @@
+<div class="card my-5">
+  <div class="card-body">
+    <h1>Nova postagem</h1>
+
+    <%= render 'form', post: @post %>
+
+    <%= link_to 'Voltar', posts_path, class: 'btn btn-light mt-2' %>
+  </div>
+</div>

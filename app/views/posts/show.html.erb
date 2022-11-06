@@ -1,0 +1,28 @@
+<div class="card my-5">
+  <div class="card-body">
+    <p id="notice"><%= notice %></p>
+
+    <h1 class="text-center"><%= @post.title %></h1>
+    <hr >
+    <div class="my-4">
+      <%= simple_format(@post.content) %>
+    </div>
+
+    <%= link_to 'Voltar', posts_path, class: 'btn btn-light' %>
+  </div>
+</div>
+
+<div class="card my-1">
+  <div class="card-body">
+    <p class="font-weight-bold">Comentários</p>
+    <%= form_with(model: [@post, @post.comments.build]) do |f| %>
+      <div class="form-group">
+        <%= f.label 'Novo comentário' %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Postar', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
+<%= render @post.comments %>

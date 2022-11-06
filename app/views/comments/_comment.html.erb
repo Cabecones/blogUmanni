@@ -1,0 +1,7 @@
+<% unless !comment.persisted? %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= comment.content %>
+    </div>
+  </div>
+<% end %>

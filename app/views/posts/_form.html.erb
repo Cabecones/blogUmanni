@@ -1,0 +1,25 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h4 class="text-danger"><%= pluralize(post.errors.count, "Erro") %> essa postagem não pode ser salva:</h4>
+
+      <ul class="list-group">
+        <% post.errors.full_messages.each do |message| %>
+          <li class="list-group-item list-group-item-danger"><%= "Nenhum campo deve ficar em branco" %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, "Título" %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, "Conteúdo" %>
+    <%= form.text_area :content, class: 'form-control' %>
+  </div>
+
+  <%= form.submit "Postar", class: 'btn btn-primary' %>
+<% end %>
