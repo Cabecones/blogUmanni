@@ -1,28 +1,25 @@
 # Project Umanni by Keven
 
-Requirements
+## Requirements
  *| Version
  --- | ---
  `Ruby` | *2.7.6*
  `Rails` | *6.1.5*
  
+## How to run the project
 
-Run the command to install the necessary dependencies
+Run this command to install the necessary ruby gems
 ```
 bundle install
 ```
 
-Go to the /config/database.yml file and fill in the username and password of your postgresql user to run the local database
+Go to `/config/database.yml` and fill in the username and password of your postgresql user to run the local database
 
-Start the database with the command:
+Start the database with the following commands:
 ```
 rails db:create
-```
-```
-rails db:seed
-```
-```
 rails db:migrate
+rails db:seed
 ```
 Now you can start the server
 ```
