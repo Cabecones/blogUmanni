@@ -69,7 +69,7 @@ gem 'rubocop-rspec', require: false
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
 
 # windows
-gem 'wdm', '>= 0.1.0'
+#gem 'wdm', '>= 0.1.0'
 
 gem 'jquery-rails'
 
